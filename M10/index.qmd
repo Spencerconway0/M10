@@ -1,0 +1,47 @@
+---
+title: "Connecting people, creativity, and data"
+toc: false
+---
+
+:::: hero
+::: eyebrow
+Marketing · Analytics · Player Development
+:::
+
+## Hi, I’m Spencer Conway.
+
+I am a graduate student in Cal Poly Pomona’s Master of Science in Digital Marketing program. My background in psychology and basketball player development has shaped how I work with people. I enjoy creating content, building relationships, and using data to understand what works. 
+
+[Explore my CEP dashboard](cep.qmd){.btn .btn-primary}
+::::
+
+:::::: columns
+:::: {.column width="30%"}
+![Spencer Conway](assets/spencer.jpg){width=220px}
+:::
+::::
+
+::: {.column width="70%"}
+## Where I want to go
+
+I want to build a career in digital marketing, social media, or marketing operations. I am interested in work that combines creative ideas with measurable results, especially in sports, apparel, and wellness.
+
+## Skills I am developing
+
+-   **Analytics:** R, SQL, GA4, and interpreting marketing performance.
+-   **Communication:** content planning, presentations, and visual storytelling.
+-   **Project work:** Quarto, GitHub, collaborative research, and organizing deliverables.
+-   **Leadership:** coaching, relationship building, and player development.
+:::
+::::::
+
+## Education
+
+| School                          | Education                              |
+|---------------------------------|----------------------------------------|
+| Cal Poly Pomona                 | M.S. in Digital Marketing, in progress |
+| University of Northern Colorado | B.A. in Psychology                     |
+
+## What you can explore here
+
+The [CEP page](cep.qmd) explains the purpose and limits of my Instagram dashboard. The [styling page](styling.qmd) shows how I used CSS and SCSS. The [listings page](listings.qmd) organizes examples of my work so visitors can find relevant topics.

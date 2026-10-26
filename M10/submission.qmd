@@ -1,0 +1,18 @@
+---
+title: "M10: Sharing Outputs with the Audience"
+author: "Spencer Conway"
+format:
+  html:
+    embed-resources: true
+---
+
+## Website and source files
+
+- [Open my M10 website](https://spencerconway0.github.io/spencerconway.github.io/m10/)
+- [Open the GitHub repository and M10 source files](https://github.com/Spencerconway0/spencerconway.github.io/tree/main/M10)
+
+## What the website includes
+
+The website includes my background and career interests, a portal to a Quarto dashboard for my RKR Instagram project, working CSS/SCSS styling examples, and a searchable Quarto listing. The dashboard uses clearly labeled simulated data for practice.
+
+**Draft status:** The personal photo must be added before final submission.

@@ -1,0 +1,31 @@
+project:
+  type: website
+  output-dir: _site
+  render:
+    - '*.qmd'
+    - 'projects/*.qmd'
+  resources:
+    - assets/
+    - data/
+website:
+  title: Spencer Conway
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: cep.qmd
+        text: CEP Dashboard
+      - href: styling.qmd
+        text: CSS & SCSS
+      - href: listings.qmd
+        text: Portfolio Listings
+  page-footer: 'Spencer Conway · M10 · Sharing Outputs with an Audience'
+format:
+  html:
+    theme: [cosmo, theme.scss]
+    css: styles.css
+    toc: true
+    code-copy: true
+    code-fold: false
+    anchor-sections: true
+    lang: en

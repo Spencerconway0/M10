@@ -1,0 +1,9 @@
+---
+title: "Sharing an analysis with an audience"
+description: "Navigation, project context, and organized portfolio notes."
+categories: [Communication, Quarto]
+---
+
+This website connects a short bio, a dashboard, styling examples, and a listing. I organized the pages around what a visitor might want to learn.
+
+[Return to the home page](../index.qmd)

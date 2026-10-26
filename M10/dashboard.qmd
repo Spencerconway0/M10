@@ -1,0 +1,11 @@
+---
+title: "RKR Instagram | Demonstration"
+format:
+  dashboard:
+    orientation: rows
+    scrolling: true
+    theme: cosmo
+---
+
+CEP Data Collection in Progress
+My project focuses on Instagram content and engagement for Restaurant at Kellogg Ranch. CEP data is not yet available, so dashboard results will be added after data collection and analysis.

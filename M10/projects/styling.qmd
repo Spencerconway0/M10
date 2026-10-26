@@ -1,0 +1,9 @@
+---
+title: "A consistent visual style"
+description: "CSS components and an SCSS theme for a readable site."
+categories: [Design, Quarto]
+---
+
+I used SCSS variables for shared theme choices and CSS classes for specific components. The styling page includes the code and a live example.
+
+[Explore the styling examples](../styling.qmd)

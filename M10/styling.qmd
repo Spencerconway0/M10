@@ -1,0 +1,71 @@
+---
+title: "Making a Quarto website easier to read"
+subtitle: "Using CSS and SCSS with a consistent purpose"
+---
+
+## Why styling matters
+
+For this site, I wanted visitors to find the main pages quickly and read the content without distractions. I used a warm background, dark green accents, and consistent headings. The navigation and page titles help visitors understand where they are.
+
+## CSS controls individual elements
+
+CSS changes how HTML elements look. A class selector lets me apply the same style wherever I need it. For example, `.demo-card` adds padding, a background, and a left border to the example below.
+
+```css
+.demo-card {
+  padding: 1.5rem;
+  border-left: 5px solid #225c51;
+  background: #e9eee6;
+  border-radius: 8px;
+}
+```
+
+::: {.demo-card}
+**A live CSS example**
+
+This box uses the `.demo-card` class from `styles.css`. It gives a short takeaway a consistent visual treatment.
+:::
+
+In a QMD file, I apply it using a fenced div:
+
+```markdown
+::: {.demo-card}
+Content goes here.
+:::
+```
+
+## SCSS adjusts the theme
+
+SCSS extends CSS with features such as variables and nesting. Quarto compiles the SCSS theme into CSS when the website renders. I used theme variables to set shared colors and fonts before the Bootstrap theme is compiled.
+
+```scss
+/*-- scss:defaults --*/
+$primary: #225c51;
+$body-bg: #faf9f5;
+$body-color: #202e2b;
+$headings-font-family: Georgia, serif;
+
+/*-- scss:rules --*/
+h2 { border-bottom-color: #cbd6ce; }
+```
+
+CSS works well for a specific component, while SCSS theme variables help keep the website consistent. Both are active in this project.
+
+## Connecting the files
+
+My `_quarto.yml` loads the base theme, my SCSS theme, and the CSS file:
+
+```yaml
+format:
+  html:
+    theme: [cosmo, theme.scss]
+    css: styles.css
+```
+
+The same file defines the four navigation tabs. This avoids rebuilding the navigation on every page.
+
+## Keeping the site usable
+
+I included visible keyboard focus outlines, descriptive links, and a mobile media query that reduces the hero padding and photo area on small screens. Meaningful images need alternative text. I also kept the main information in text so color alone does not communicate meaning.
+
+[Quarto HTML theming guide](https://quarto.org/docs/output-formats/html-themes.html)

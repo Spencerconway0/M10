@@ -1,0 +1,32 @@
+---
+title: "Instagram Content & Engagement"
+subtitle: "Restaurant at Kellogg Ranch · MSDM Culminating Experience Project"
+---
+
+## Helping RKR understand its audience
+
+My part of the CEP focuses on Instagram content and engagement. I want to understand which content types and messages attract stronger responses and may support reservation intent. This dashboard is a prototype of how I could share those results with the client.
+
+[Open the Quarto dashboard](dashboard.qmd){.btn .btn-primary}
+
+## What the dashboard measures
+
+| Measure | Calculation | How the client could use it |
+|---|---|---|
+| Engagement rate by reach | Engagements ÷ reach × 100 | Compare responses relative to exposure |
+| Engagements | Likes + comments + saves + shares | Understand interaction volume |
+| Profile actions | Total actions reported for the included posts | Explore interest beyond the post |
+
+The sample CSV treats reach as the sum of post reach. A person may appear in the reach of more than one post, so this is **not unique campaign reach**. Profile actions are a total action count, not a count of unique people or reservations.
+
+## From a prototype to client reporting
+
+I would replace the [sample CSV](data/instagram-demo.csv) with an approved Instagram Insights export, use the same reporting period for each comparison, and document how each metric is defined. I would also code message styles and compare similar posting conditions. If tagged link data becomes available, I could examine Instagram referral activity separately.
+
+For the pilot, I would compare a baseline period with a planned content test. Higher engagement alone would not establish that Instagram increased reservations. A small sample, repeat exposure, different posting times, and other marketing activity could affect the results.
+
+## How this was built
+
+The dashboard uses Quarto’s `format: dashboard`, cards, a chart, and a table. Its values were calculated from the included CSV during project preparation. The chart and table are static; after replacing the data, their summaries must be recalculated and the site rendered again. This version does not connect to Instagram or update automatically.
+
+[Dashboard documentation](https://quarto.org/docs/dashboards/)

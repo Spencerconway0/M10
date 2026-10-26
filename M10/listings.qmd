@@ -1,0 +1,50 @@
+---
+title: "Find work by topic"
+subtitle: "A portfolio organized with Quarto Listings"
+listing:
+  id: portfolio
+  contents: projects
+  type: grid
+  fields: [title, description, categories]
+  categories: true
+  filter-ui: true
+  sort: title
+---
+
+## Browse the examples
+
+These short project notes document work included in this M10 website. Use the category labels or search box to find a topic.
+
+::: {#portfolio}
+:::
+
+## What is a listing?
+
+A Quarto listing builds an organized collection of pages using their metadata. Instead of adding every project link manually, I can place a QMD file in `projects/` and give it a title, description, and categories. The listing updates when I render the website.
+
+## How I set it up
+
+```yaml
+listing:
+  id: portfolio
+  contents: projects
+  type: grid
+  fields: [title, description, categories]
+  categories: true
+  filter-ui: true
+  sort: title
+```
+
+A project page supplies the information used on its card:
+
+```yaml
+title: "Instagram dashboard prototype"
+description: "A demonstration of content performance reporting."
+categories: [Analytics, CEP]
+```
+
+## How this helps my portfolio
+
+I could organize future work into analytics, content, and research categories. A hiring manager could quickly find a dashboard or read about a project’s purpose and limitations. I would add real results only after checking the data and confirming permission to share it.
+
+[Quarto listings guide](https://quarto.org/docs/websites/website-listings.html)

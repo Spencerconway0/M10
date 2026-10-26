@@ -1,0 +1,9 @@
+---
+title: "Instagram dashboard prototype"
+description: "A demonstration of content performance reporting."
+categories: [Analytics, CEP]
+---
+
+I built a Quarto dashboard to show how Instagram content categories could be compared. The figures are simulated, and the project page explains their limits.
+
+[View the dashboard context](../cep.qmd)
