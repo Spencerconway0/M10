@@ -1,0 +1,198 @@
+[
+  {
+    "objectID": "submission.html",
+    "href": "submission.html",
+    "title": "M10: Sharing Outputs with the Audience",
+    "section": "",
+    "text": "Open my M10 website\nOpen the GitHub repository and M10 source files"
+  },
+  {
+    "objectID": "submission.html#website-and-source-files",
+    "href": "submission.html#website-and-source-files",
+    "title": "M10: Sharing Outputs with the Audience",
+    "section": "",
+    "text": "Open my M10 website\nOpen the GitHub repository and M10 source files"
+  },
+  {
+    "objectID": "submission.html#what-the-website-includes",
+    "href": "submission.html#what-the-website-includes",
+    "title": "M10: Sharing Outputs with the Audience",
+    "section": "What the website includes",
+    "text": "What the website includes\nThe website includes my background and career interests, a portal to a Quarto dashboard for my RKR Instagram project, working CSS/SCSS styling examples, and a searchable Quarto listing. The dashboard uses clearly labeled simulated data for practice.\nDraft status: The personal photo must be added before final submission."
+  },
+  {
+    "objectID": "projects/website.html",
+    "href": "projects/website.html",
+    "title": "Sharing an analysis with an audience",
+    "section": "",
+    "text": "This website connects a short bio, a dashboard, styling examples, and a listing. I organized the pages around what a visitor might want to learn.\nReturn to the home page"
+  },
+  {
+    "objectID": "projects/instagram.html",
+    "href": "projects/instagram.html",
+    "title": "Instagram dashboard prototype",
+    "section": "",
+    "text": "I built a Quarto dashboard to show how Instagram content categories could be compared. The figures are simulated, and the project page explains their limits.\nView the dashboard context"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Connecting people, creativity, and data",
+    "section": "",
+    "text": "Marketing · Analytics · Player Development\n\n\n\nI am a graduate student in Cal Poly Pomona’s Master of Science in Digital Marketing program. My background in psychology and basketball player development has shaped how I work with people. I enjoy creating content, building relationships, and using data to understand what works.\nExplore my CEP dashboard\n::::::"
+  },
+  {
+    "objectID": "index.html#hi-im-spencer-conway.",
+    "href": "index.html#hi-im-spencer-conway.",
+    "title": "Connecting people, creativity, and data",
+    "section": "",
+    "text": "I am a graduate student in Cal Poly Pomona’s Master of Science in Digital Marketing program. My background in psychology and basketball player development has shaped how I work with people. I enjoy creating content, building relationships, and using data to understand what works.\nExplore my CEP dashboard"
+  },
+  {
+    "objectID": "index.html#where-i-want-to-go",
+    "href": "index.html#where-i-want-to-go",
+    "title": "Connecting people, creativity, and data",
+    "section": "Where I want to go",
+    "text": "Where I want to go\nI want to build a career in digital marketing, social media, or marketing operations. I am interested in work that combines creative ideas with measurable results, especially in sports, apparel, and wellness."
+  },
+  {
+    "objectID": "index.html#skills-i-am-developing",
+    "href": "index.html#skills-i-am-developing",
+    "title": "Connecting people, creativity, and data",
+    "section": "Skills I am developing",
+    "text": "Skills I am developing\n\nAnalytics: R, SQL, GA4, and interpreting marketing performance.\nCommunication: content planning, presentations, and visual storytelling.\nProject work: Quarto, GitHub, collaborative research, and organizing deliverables.\nLeadership: coaching, relationship building, and player development."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Connecting people, creativity, and data",
+    "section": "Education",
+    "text": "Education\n\n\n\n\n\n\n\nSchool\nEducation\n\n\n\n\nCal Poly Pomona\nM.S. in Digital Marketing, in progress\n\n\nUniversity of Northern Colorado\nB.A. in Psychology"
+  },
+  {
+    "objectID": "index.html#what-you-can-explore-here",
+    "href": "index.html#what-you-can-explore-here",
+    "title": "Connecting people, creativity, and data",
+    "section": "What you can explore here",
+    "text": "What you can explore here\nThe CEP page explains the purpose and limits of my Instagram dashboard. The styling page shows how I used CSS and SCSS. The listings page organizes examples of my work so visitors can find relevant topics."
+  },
+  {
+    "objectID": "cep.html",
+    "href": "cep.html",
+    "title": "Instagram Content & Engagement",
+    "section": "",
+    "text": "My part of the CEP focuses on Instagram content and engagement. I want to understand which content types and messages attract stronger responses and may support reservation intent. This dashboard is a prototype of how I could share those results with the client.\nOpen the Quarto dashboard"
+  },
+  {
+    "objectID": "cep.html#helping-rkr-understand-its-audience",
+    "href": "cep.html#helping-rkr-understand-its-audience",
+    "title": "Instagram Content & Engagement",
+    "section": "",
+    "text": "My part of the CEP focuses on Instagram content and engagement. I want to understand which content types and messages attract stronger responses and may support reservation intent. This dashboard is a prototype of how I could share those results with the client.\nOpen the Quarto dashboard"
+  },
+  {
+    "objectID": "cep.html#what-the-dashboard-measures",
+    "href": "cep.html#what-the-dashboard-measures",
+    "title": "Instagram Content & Engagement",
+    "section": "What the dashboard measures",
+    "text": "What the dashboard measures\n\n\n\n\n\n\n\n\nMeasure\nCalculation\nHow the client could use it\n\n\n\n\nEngagement rate by reach\nEngagements ÷ reach × 100\nCompare responses relative to exposure\n\n\nEngagements\nLikes + comments + saves + shares\nUnderstand interaction volume\n\n\nProfile actions\nTotal actions reported for the included posts\nExplore interest beyond the post\n\n\n\nThe sample CSV treats reach as the sum of post reach. A person may appear in the reach of more than one post, so this is not unique campaign reach. Profile actions are a total action count, not a count of unique people or reservations."
+  },
+  {
+    "objectID": "cep.html#from-a-prototype-to-client-reporting",
+    "href": "cep.html#from-a-prototype-to-client-reporting",
+    "title": "Instagram Content & Engagement",
+    "section": "From a prototype to client reporting",
+    "text": "From a prototype to client reporting\nI would replace the sample CSV with an approved Instagram Insights export, use the same reporting period for each comparison, and document how each metric is defined. I would also code message styles and compare similar posting conditions. If tagged link data becomes available, I could examine Instagram referral activity separately.\nFor the pilot, I would compare a baseline period with a planned content test. Higher engagement alone would not establish that Instagram increased reservations. A small sample, repeat exposure, different posting times, and other marketing activity could affect the results."
+  },
+  {
+    "objectID": "cep.html#how-this-was-built",
+    "href": "cep.html#how-this-was-built",
+    "title": "Instagram Content & Engagement",
+    "section": "How this was built",
+    "text": "How this was built\nThe dashboard uses Quarto’s format: dashboard, cards, a chart, and a table. Its values were calculated from the included CSV during project preparation. The chart and table are static; after replacing the data, their summaries must be recalculated and the site rendered again. This version does not connect to Instagram or update automatically.\nDashboard documentation"
+  },
+  {
+    "objectID": "listings.html",
+    "href": "listings.html",
+    "title": "Find work by topic",
+    "section": "",
+    "text": "These short project notes document work included in this M10 website. Use the category labels or search box to find a topic.\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\nDesign\n\nQuarto\n\n\n\nCSS components and an SCSS theme for a readable site.\n\n\n\n\n\n\n\n\n\n\n\nAnalytics\n\nCEP\n\n\n\nA demonstration of content performance reporting.\n\n\n\n\n\n\n\n\n\n\n\nCommunication\n\nQuarto\n\n\n\nNavigation, project context, and organized portfolio notes.\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "listings.html#browse-the-examples",
+    "href": "listings.html#browse-the-examples",
+    "title": "Find work by topic",
+    "section": "",
+    "text": "These short project notes document work included in this M10 website. Use the category labels or search box to find a topic.\n\n\n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\nDesign\n\nQuarto\n\n\n\nCSS components and an SCSS theme for a readable site.\n\n\n\n\n\n\n\n\n\n\n\nAnalytics\n\nCEP\n\n\n\nA demonstration of content performance reporting.\n\n\n\n\n\n\n\n\n\n\n\nCommunication\n\nQuarto\n\n\n\nNavigation, project context, and organized portfolio notes.\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "listings.html#what-is-a-listing",
+    "href": "listings.html#what-is-a-listing",
+    "title": "Find work by topic",
+    "section": "What is a listing?",
+    "text": "What is a listing?\nA Quarto listing builds an organized collection of pages using their metadata. Instead of adding every project link manually, I can place a QMD file in projects/ and give it a title, description, and categories. The listing updates when I render the website."
+  },
+  {
+    "objectID": "listings.html#how-i-set-it-up",
+    "href": "listings.html#how-i-set-it-up",
+    "title": "Find work by topic",
+    "section": "How I set it up",
+    "text": "How I set it up\nlisting:\n  id: portfolio\n  contents: projects\n  type: grid\n  fields: [title, description, categories]\n  categories: true\n  filter-ui: true\n  sort: title\nA project page supplies the information used on its card:\ntitle: \"Instagram dashboard prototype\"\ndescription: \"A demonstration of content performance reporting.\"\ncategories: [Analytics, CEP]"
+  },
+  {
+    "objectID": "listings.html#how-this-helps-my-portfolio",
+    "href": "listings.html#how-this-helps-my-portfolio",
+    "title": "Find work by topic",
+    "section": "How this helps my portfolio",
+    "text": "How this helps my portfolio\nI could organize future work into analytics, content, and research categories. A hiring manager could quickly find a dashboard or read about a project’s purpose and limitations. I would add real results only after checking the data and confirming permission to share it.\nQuarto listings guide"
+  },
+  {
+    "objectID": "projects/styling.html",
+    "href": "projects/styling.html",
+    "title": "A consistent visual style",
+    "section": "",
+    "text": "I used SCSS variables for shared theme choices and CSS classes for specific components. The styling page includes the code and a live example.\nExplore the styling examples"
+  },
+  {
+    "objectID": "styling.html",
+    "href": "styling.html",
+    "title": "Making a Quarto website easier to read",
+    "section": "",
+    "text": "For this site, I wanted visitors to find the main pages quickly and read the content without distractions. I used a warm background, dark green accents, and consistent headings. The navigation and page titles help visitors understand where they are."
+  },
+  {
+    "objectID": "styling.html#why-styling-matters",
+    "href": "styling.html#why-styling-matters",
+    "title": "Making a Quarto website easier to read",
+    "section": "",
+    "text": "For this site, I wanted visitors to find the main pages quickly and read the content without distractions. I used a warm background, dark green accents, and consistent headings. The navigation and page titles help visitors understand where they are."
+  },
+  {
+    "objectID": "styling.html#css-controls-individual-elements",
+    "href": "styling.html#css-controls-individual-elements",
+    "title": "Making a Quarto website easier to read",
+    "section": "CSS controls individual elements",
+    "text": "CSS controls individual elements\nCSS changes how HTML elements look. A class selector lets me apply the same style wherever I need it. For example, .demo-card adds padding, a background, and a left border to the example below.\n.demo-card {\n  padding: 1.5rem;\n  border-left: 5px solid #225c51;\n  background: #e9eee6;\n  border-radius: 8px;\n}\n\nA live CSS example\nThis box uses the .demo-card class from styles.css. It gives a short takeaway a consistent visual treatment.\n\nIn a QMD file, I apply it using a fenced div:\n::: {.demo-card}\nContent goes here.\n:::"
+  },
+  {
+    "objectID": "styling.html#scss-adjusts-the-theme",
+    "href": "styling.html#scss-adjusts-the-theme",
+    "title": "Making a Quarto website easier to read",
+    "section": "SCSS adjusts the theme",
+    "text": "SCSS adjusts the theme\nSCSS extends CSS with features such as variables and nesting. Quarto compiles the SCSS theme into CSS when the website renders. I used theme variables to set shared colors and fonts before the Bootstrap theme is compiled.\n/*-- scss:defaults --*/\n$primary: #225c51;\n$body-bg: #faf9f5;\n$body-color: #202e2b;\n$headings-font-family: Georgia, serif;\n\n/*-- scss:rules --*/\nh2 { border-bottom-color: #cbd6ce; }\nCSS works well for a specific component, while SCSS theme variables help keep the website consistent. Both are active in this project."
+  },
+  {
+    "objectID": "styling.html#connecting-the-files",
+    "href": "styling.html#connecting-the-files",
+    "title": "Making a Quarto website easier to read",
+    "section": "Connecting the files",
+    "text": "Connecting the files\nMy _quarto.yml loads the base theme, my SCSS theme, and the CSS file:\nformat:\n  html:\n    theme: [cosmo, theme.scss]\n    css: styles.css\nThe same file defines the four navigation tabs. This avoids rebuilding the navigation on every page."
+  },
+  {
+    "objectID": "styling.html#keeping-the-site-usable",
+    "href": "styling.html#keeping-the-site-usable",
+    "title": "Making a Quarto website easier to read",
+    "section": "Keeping the site usable",
+    "text": "Keeping the site usable\nI included visible keyboard focus outlines, descriptive links, and a mobile media query that reduces the hero padding and photo area on small screens. Meaningful images need alternative text. I also kept the main information in text so color alone does not communicate meaning.\nQuarto HTML theming guide"
+  }
+]

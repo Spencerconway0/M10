@@ -1,0 +1,8 @@
+.hero { padding: 2rem; background: #e9eee6; border-radius: 12px; margin: 1rem 0 2rem; }
+.eyebrow { text-transform: uppercase; letter-spacing: .15em; font-size: .8rem; font-weight: 700; color: #225c51; }
+.profile-placeholder { width: 220px; height: 220px; border: 2px dashed #587369; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-align: center; padding: 2rem; margin: 1rem auto; background: #f7f8f3; }
+.demo-card { padding: 1.5rem; border-left: 5px solid #225c51; background: #e9eee6; border-radius: 8px; }
+.btn-primary { background: #225c51; border-color: #225c51; }
+a:focus-visible, button:focus-visible { outline: 3px solid #a65c12; outline-offset: 3px; }
+.chart { width: 100%; height: auto; max-height: 340px; }
+@media (max-width: 600px) { .hero { padding: 1.2rem; } .profile-placeholder { width: 170px; height: 170px; } }
