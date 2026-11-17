@@ -1,0 +1,295 @@
+---
+title: "Summary Tables with gtsummary"
+subtitle: "M08 Reflection | Restaurant at Kellogg Ranch"
+author: "Spencer Conway"
+institute: "IBM 6400, Cal Poly Pomona"
+date: "2026-11-16"
+format:
+  revealjs:
+    theme: serif
+    width: 1600
+    height: 900
+    footer: "M08 Reflection · Spencer Conway"
+    transition: slide
+    transition-speed: default
+    incremental: false
+    toc: true
+    toc-depth: 1
+    slide-number: true
+    scrollable: true
+    smaller: true
+    code-fold: false
+    code-overflow: wrap
+    number-sections: false
+    number-depth: 5
+    embed-resources: true
+    include-in-header:
+      text: |
+        <style>
+        :root { --r-background-color: #faf8f2; --r-main-color: #24322b; --r-heading-color: #1b4836; --r-link-color: #1b5f4b; }
+        .reveal .slides section:not(#title-slide) h2 { border-bottom: 2px solid #bca46b; padding-bottom: .22em; }
+        .reveal .slides blockquote { width: 96%; box-sizing: border-box; border-left: 5px solid #bca46b; background: #f1ecdf; text-align: left; box-shadow: none; padding: .46em .7em; font-size: .88em; font-style: normal; }
+        .reveal .slides blockquote p { margin: 0; }
+        .reveal .slides table { font-size: .8em; margin: .6em 0; }
+        .reveal .slides thead { background: #e5eee6; }
+        .reveal .slides pre { width: 100%; font-size: .54em; }
+        .reveal .slides .columns .column { padding-right: .6em; }
+        .reveal .slide-menu-button { color: #1b4836; }
+        .reveal .footer::after { content: "RKR"; display: inline-block; margin-left: .8em; padding: .07em .34em; border: 1px solid #1b4836; border-radius: 3px; color: #1b4836; font-weight: bold; letter-spacing: .08em; }
+        </style>
+editor: visual
+engine: knitr
+execute:
+  echo: true
+  freeze: auto
+---
+
+```{r}
+#| include: false
+cep_csv <- Sys.getenv(
+  "M08_CEP_CSV",
+  unset = "Post Performance (Collins College) April 1, 2026 - October 1, 2026.csv"
+)
+has_export <- file.exists(cep_csv)
+```
+
+# Step 1 lecture
+
+## 1. What the package does
+
+> 1. In Step 1, you have seen how to create a summary table and modify it for various statistical analyses. Summarize the package's capabilities as explained by the speaker. How may the {gtsummary} benefit you for your school work or career?
+
+In Dr. Jung’s lecture, `tbl_summary()` puts counts and percentages for categorical variables and summaries such as the median and interquartile range for numeric variables in one table. The `by` argument makes it easy to compare groups side by side.
+
+- `add_p()` adds the result of a group comparison. The lecture showed when to use tests such as Welch’s t-test, Wilcoxon rank-sum, and chi-square.
+- `add_difference()` puts the size and uncertainty of a difference next to the group summaries. A p-value alone would leave me guessing about how large the difference actually was.
+- `tbl_cross()` displays counts and percentages for two categorical variables. `tbl_regression()` organizes estimates, confidence intervals, and p-values from a fitted model.
+
+::: {.notes}
+Mention that Welch’s test compares means and Wilcoxon uses ranks. The choice depends on the question and the data.
+:::
+
+## How I would use it
+
+For my RKR project, I could set up one table showing how single photos and carousels compare on reach, likes, and saves. If the team receives another export, I can rerun the same code with the same labels and definitions. That would save me from copying numbers into a new table every time the data changes.
+
+. . .
+
+For a marketing job, I would use the same approach to summarize campaign tests. I’d want a manager to see the sample size and the size of a difference before deciding whether it’s worth changing the content schedule.
+
+# Extended presentation
+
+## 2.1 Where each package fits
+
+> 2. In Step 2, you watched the extended presentation of the {gtsummary} package by ***Dr. Daniel Dsjoberg***, the very creator of the package.
+>
+> 2.1. How does it differ from gt and gtExtras?
+
+:::: {.columns}
+::: {.column width="35%"}
+**{gtsummary}**
+
+Starts from data or a fitted model and organizes the statistics. I’d use it to build a cross-tab or display a model.
+:::
+::: {.column width="32%"}
+**{gt}**
+
+Builds and formats a display table. Once I convert a summary with `as_gt()`, I can style the headers, add source notes, and adjust spacing.
+:::
+::: {.column width="33%"}
+**{gtExtras}**
+
+Adds convenience functions to a `gt` table. A sparkline can show a trend inside a table cell if I have a time series for each row.
+:::
+::::
+
+## 2.2 Three things to try {transition="fade"}
+
+> 2.2. Give three things you learned newly that were not explained in the lecture in Step 1.
+
+::: {.incremental}
+1. **Pull a statistic into the write-up with `inline_text()`.** I can pull a coefficient or p-value from the same table used in the report. If I update the model, the number in the written interpretation can update too.
+2. **Repeat the same summary across groups with `tbl_strata()`.** I could build the same format breakdown separately for standard and collaborative posts while keeping the table layout consistent.
+3. **Choose a table output for the audience.** `as_gt()` was covered in Step 1. `as_flex_table()` gives me a route to an editable Word table when teammates need to revise a shared report.
+:::
+
+::: {.aside}
+I used the package documentation to verify these three workflows. The assigned video is linked under References.
+:::
+
+# RKR Instagram data
+
+## 3. Cross-tabulation
+
+> 3. Apply what you learned to your MSDM CEP data. Choose two appropriate variables for cross-tabulation and show if the two variables are associated or not. Use appropriate statistics to test if the two variables are associated. Code, produce the table, and interpret the result.
+
+I used the Collins College post-performance export covering April 1 to October 1, 2026. I kept the 21 posts from the restaurant’s Instagram account, @rkr_cpp. The export contains single photos and carousels for that account.
+
+I compared **post format** with **whether the post received at least one save**. Saves are one way to see which posts people may want to come back to. All 21 posts had a recorded save count.
+
+## 3. Cross-tabulation code {.scrollable}
+
+```{r}
+#| eval: !expr has_export
+#| output: false
+library(gtsummary)
+
+# cep_csv points to the original Collins College export.
+raw <- read.csv(cep_csv, check.names = FALSE)
+ig <- subset(raw, Network == "Instagram" & Profile == "rkr_cpp")
+ig$format <- factor(
+  ig[["Content Type"]],
+  levels = c("Photo", "Carousel"), labels = c("Single photo", "Carousel")
+)
+ig$saved <- factor(
+  ifelse(ig$Saves >= 1, "At least one save", "Zero saves"),
+  levels = c("Zero saves", "At least one save")
+)
+
+save_table <- tbl_cross(
+  ig, row = format, col = saved, percent = "row",
+  label = list(format ~ "Post format", saved ~ "Save activity"),
+  missing = "no"
+) |>
+  add_p(test = "fisher.test", pvalue_fun = label_style_pvalue(digits = 3))
+save_table
+
+# Check that the small expected counts justify an exact test.
+save_counts <- with(ig, table(format, saved))
+outer(rowSums(save_counts), colSums(save_counts)) / sum(save_counts)
+fisher.test(save_counts)
+```
+
+## 3. Cross-tabulation results
+
+```{r}
+#| echo: false
+#| results: asis
+if (has_export) {
+  print(as_kable(save_table, format = "pipe"))
+} else {
+  cat("\n", r"(
+| Post format | Zero saves | At least one save | Total |
+|:--|--:|--:|--:|
+| Single photo | 0 (0.0%) | 4 (100.0%) | 4 |
+| Carousel | 9 (52.9%) | 8 (47.1%) | 17 |
+| All posts | 9 (42.9%) | 12 (57.1%) | 21 |
+)", "\n")
+}
+```
+
+Percentages are within each row. The expected counts for the photo row under independence were 1.71 and 2.29, so I used a two-sided Fisher’s exact test.
+
+::: {.fragment}
+All four single photos received at least one save, compared with eight of 17 carousels. **Fisher’s exact p = 0.104**, so the sample gives insufficient evidence of an association at the 0.05 level. With only four photos, I would treat the difference as a pattern to check in future posts.
+:::
+
+# Multiple regression
+
+## 4. Regression setup
+
+> 4. Using the MSDM CEP data, run multiple regression. The dependent variable can be continuous or dichotomous. Regress a dependent variable on a set of independent variables. Code, produce the table, and interpret the result.
+
+I used multiple linear regression to look at how **post format** and **collaboration status** relate to **engagement rate by reach**. The model helps me compare photo and carousel posts at the same collaboration status.
+
+- **Outcome** is `100 × (likes + comments + shares + saves) / reach`.[^rate]
+- **Predictors** are carousel versus single photo and collaborative versus standard. I grouped the export’s *Authored* and *Joined* categories as collaborative.
+- **Sample** is 19 posts with recorded positive reach and all four interaction counts. Two carousels lacked reach.
+
+[^rate]: Reach is the denominator in the CEP definition. The export also contains a separate impression-based rate.
+
+## 4. Regression code {.scrollable}
+
+```{r}
+#| eval: !expr has_export
+#| output: false
+ig$reach_count <- as.numeric(gsub(",", "", ig$Reach, fixed = TRUE))
+ig$collaboration <- factor(
+  ifelse(ig[["Collaboration Type"]] %in% c("Authored", "Joined"),
+         "Collaborative", "Standard"),
+  levels = c("Standard", "Collaborative")
+)
+complete_posts <- subset(
+  ig, is.finite(reach_count) & reach_count > 0 &
+    complete.cases(Likes, Comments, Shares, Saves, format, collaboration)
+)
+complete_posts$engagement_rate <- with(
+  complete_posts, 100 * (Likes + Comments + Shares + Saves) / reach_count
+)
+
+model <- lm(engagement_rate ~ format + collaboration, data = complete_posts)
+model_table <- tbl_regression(
+  model, intercept = TRUE,
+  label = list(format ~ "Post format", collaboration ~ "Collaboration status"),
+  estimate_fun = label_style_number(digits = 2),
+  pvalue_fun = label_style_pvalue(digits = 3)
+)
+model_table
+
+summary(model)
+confint(model)
+
+# Check how sensitive the estimates are to the most influential post.
+most_influential <- which.max(cooks.distance(model))
+sensitivity_model <- update(model, data = complete_posts[-most_influential, ])
+coef(sensitivity_model)
+```
+
+## 4. Regression results
+
+```{r}
+#| echo: false
+#| results: asis
+if (has_export) {
+  print(as_kable(model_table, format = "pipe"))
+} else {
+  cat("\n", r"(
+| Model term | Estimate (pp) | 95% CI (pp) | p-value |
+|:--|--:|--:|--:|
+| Intercept (standard single photo) | 4.85 | 1.65 to 8.05 | 0.005 |
+| Carousel vs. single photo | +2.69 | −0.80 to 6.18 | 0.121 |
+| Collaborative vs. standard | +3.94 | 0.71 to 7.17 | 0.020 |
+)", "\n")
+}
+```
+
+**19 posts · R² = 0.372.** The carousel estimate compares with a single photo. The collaborative estimate compares with a standard post. Estimates are in percentage points (pp). Confidence intervals and p-values are based on ordinary least squares.
+
+- At the same collaboration status, carousels were estimated to have a **2.69-point higher** engagement rate than photos. The confidence interval spans zero.
+- At the same format, collaborative posts were estimated to have a **3.94-point higher** engagement rate than standard posts. The interval is wide and the estimate is observational.
+
+::: {.notes}
+The intercept estimates the engagement rate for a standard photo, which is the reference category for both predictors.
+:::
+
+## What I would tell RKR
+
+Single photos had a higher share of posts with a save, while carousels had a positive estimated difference in overall engagement rate. These measure different things. A post can pick up likes, comments, or shares even when it gets zero saves.
+
+The format estimate was sensitive to one post. Dropping the post with the largest Cook’s distance changed the carousel estimate from **+2.69 to +0.20 percentage points**. I’d keep both formats in the next round and compare them across similar topics and collaboration arrangements before using the result to change the content mix.
+
+::: {.aside}
+This analysis covers one account and one export window. Topic and posting date could also affect engagement.
+:::
+
+# References
+
+## Course materials and data
+
+- Jae Min Jung. [Customizable Tables with gtsummary](https://jaejungca.github.io/gtsummary/M08-Customizable%20Tables-gtsummary.html).
+- Daniel D. Sjoberg. [Presentation-ready Summary Tables with gtsummary](https://www.youtube.com/watch?v=tANo9E1SYJE).
+- Collins College. *Post Performance export, April 1 to October 1, 2026*. MSDM CEP project data.
+
+## Package documentation
+
+- [{gtsummary} documentation](https://www.danieldsjoberg.com/gtsummary/) · [Inline results](https://www.danieldsjoberg.com/gtsummary/articles/inline_text.html) · [Stratified tables](https://www.danieldsjoberg.com/gtsummary/reference/tbl_strata.html) · [Word export](https://www.danieldsjoberg.com/gtsummary/reference/as_flex_table.html)
+- [{gt} documentation](https://gt.rstudio.com/) · [{gtExtras} sparklines](https://jthomasmock.github.io/gtExtras/reference/gt_plt_sparkline.html)
+- [Quarto Reveal.js documentation](https://quarto.org/docs/presentations/revealjs/)
+
+# Appendix
+
+## Submission links and reproducibility
+
+- [GitHub repository · M08 folder](https://github.com/Spencerconway0/M10/tree/main/M08)
+- [GitHub Pages presentation](https://spencerconway0.github.io/M10/M08/Conway-M08-Reflection.html)
+- The slides display the results for the original export. To rerun the code when rendering, install `gtsummary`, `broom`, and `broom.helpers`, then place the Collins College CSV alongside the QMD or set `M08_CEP_CSV` to its path. A render without the CSV displays the saved aggregate tables.
