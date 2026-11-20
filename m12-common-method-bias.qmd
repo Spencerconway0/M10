@@ -1,0 +1,35 @@
+---
+title: "M12 Common Method Bias"
+author: "Spencer Conway"
+format:
+  html:
+    theme: none
+    embed-resources: true
+---
+
+## What the article is about
+
+Podsakoff et al. (2012) review how the way we collect data can affect the results we get. Common method variance is the variation that measures share because they were collected in the same way. Common method bias is what happens when that shared influence distorts an estimate. It can make a relationship look stronger or weaker, and it can affect some questions more than others.
+
+## Where the bias comes from
+
+It can come from using the same person to answer both sets of questions, from the order or wording of the questions, or from the way the answer scale is set up. For example, some people tend to agree with most statements. Others may give the answer they think sounds best. A long or confusing survey can also lead people to pick an answer quickly just to move on.
+
+## How to reduce it
+
+The authors suggest planning for likely sources of bias before collecting data. Researchers can use clear, neutral wording and collect the predictor and outcome from different sources when both sources have the information they need. If the same people need to answer both sets of questions, collecting the answers at different times or putting the questions in different sections may help.
+
+If bias is still a concern, researchers can measure a suspected source, like a tendency to agree, and account for it in the analysis. The article also discusses using a marker variable. This is a measure included in the same survey that should be unrelated to the main variables based on theory. The choice depends on what might be causing the bias and what data the researchers have.
+
+## Example I would use
+
+Say I want to know if customers who are happier with their visit to the Restaurant at Kellogg Ranch are more likely to come back. If I ask about satisfaction and intent to return back-to-back on the same survey, customers might answer the second question to stay consistent with the first. If my outcome is an actual return visit, I could collect satisfaction through the survey and use later reservation records to track repeat bookings, if I had access and could match them. Intent to return and an actual return visit answer different questions, so I would decide which one I want to study before collecting data.
+
+## Reference
+
+Podsakoff, P. M., MacKenzie, S. B., & Podsakoff, N. P. (2012). Sources of method bias in social science research and recommendations on how to control it. *Annual Review of Psychology, 63*, 539–569. <https://doi.org/10.1146/annurev-psych-120710-100452>
+
+## Appendix
+
+- [GitHub repository](https://github.com/Spencerconway0/M10)
+- [GitHub Pages report](https://spencerconway0.github.io/M10/m12-common-method-bias.html)
