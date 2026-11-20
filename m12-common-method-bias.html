@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Spencer Conway" />
+  <title>M12 Common Method Bias</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">M12 Common Method Bias</h1>
+<p class="author">Spencer Conway</p>
+</header>
+<h2 id="what-the-article-is-about">What the article is about</h2>
+<p>Podsakoff et al. (2012) review how the way we collect data can affect
+the results we get. Common method variance is the variation that
+measures share because they were collected in the same way. Common
+method bias is what happens when that shared influence distorts an
+estimate. It can make a relationship look stronger or weaker, and it can
+affect some questions more than others.</p>
+<h2 id="where-the-bias-comes-from">Where the bias comes from</h2>
+<p>It can come from using the same person to answer both sets of
+questions, from the order or wording of the questions, or from the way
+the answer scale is set up. For example, some people tend to agree with
+most statements. Others may give the answer they think sounds best. A
+long or confusing survey can also lead people to pick an answer quickly
+just to move on.</p>
+<h2 id="how-to-reduce-it">How to reduce it</h2>
+<p>The authors suggest planning for likely sources of bias before
+collecting data. Researchers can use clear, neutral wording and collect
+the predictor and outcome from different sources when both sources have
+the information they need. If the same people need to answer both sets
+of questions, collecting the answers at different times or putting the
+questions in different sections may help.</p>
+<p>If bias is still a concern, researchers can measure a suspected
+source, like a tendency to agree, and account for it in the analysis.
+The article also discusses using a marker variable. This is a measure
+included in the same survey that should be unrelated to the main
+variables based on theory. The choice depends on what might be causing
+the bias and what data the researchers have.</p>
+<h2 id="example-i-would-use">Example I would use</h2>
+<p>Say I want to know if customers who are happier with their visit to
+the Restaurant at Kellogg Ranch are more likely to come back. If I ask
+about satisfaction and intent to return back-to-back on the same survey,
+customers might answer the second question to stay consistent with the
+first. If my outcome is an actual return visit, I could collect
+satisfaction through the survey and use later reservation records to
+track repeat bookings, if I had access and could match them. Intent to
+return and an actual return visit answer different questions, so I would
+decide which one I want to study before collecting data.</p>
+<h2 id="reference">Reference</h2>
+<p>Podsakoff, P. M., MacKenzie, S. B., &amp; Podsakoff, N. P. (2012).
+Sources of method bias in social science research and recommendations on
+how to control it. <em>Annual Review of Psychology, 63</em>, 539–569. <a
+href="https://doi.org/10.1146/annurev-psych-120710-100452"
+class="uri">https://doi.org/10.1146/annurev-psych-120710-100452</a></p>
+<h2 id="appendix">Appendix</h2>
+<ul>
+<li><a href="https://github.com/Spencerconway0/M10">GitHub
+repository</a></li>
+<li><a
+href="https://spencerconway0.github.io/M10/m12-common-method-bias.html">GitHub
+Pages report</a></li>
+</ul>
+</body>
+</html>
